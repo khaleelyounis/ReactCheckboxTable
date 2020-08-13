@@ -1,6 +1,14 @@
 import React from 'react';
+import greenIcon from '../assets/greenIcon.png';
 
-export default ({ tableHeader, tableData, selectable, styles }) => {
+export default ({
+  tableHeader,
+  tableData,
+  selectable,
+  onClick,
+  isItemSelected,
+  styles,
+}) => {
   const renderTableHeader = () => {
     return (
       <tr className={styles.tableHeaderRow} data-testid="tableHeaderRow">
@@ -38,18 +46,35 @@ export default ({ tableHeader, tableData, selectable, styles }) => {
           <tr
             key={index}
             className={styles.tableBodyRow}
+            style={
+              isItemSelected && isItemSelected(index)
+                ? { backgroundColor: 'rgba(169, 169, 169, 0.2)' }
+                : null
+            }
             data-testid="tableBodyRow"
+            onClick={() => {
+              if (onClick) {
+                onClick(index);
+              }
+            }}
           >
             {selectable ? (
               <td
                 className={styles.tableBodyCheckbox}
                 data-testid="tableBodyCheckbox"
               >
-                <input type="checkbox" name="checkbox" data-testid="checkbox" />
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  checked={isItemSelected && isItemSelected(index)}
+                  data-testid="checkbox"
+                  onChange={() => null}
+                />
               </td>
             ) : null}
 
             {values.map((item, index) => {
+              const available = values[index + 1] === 'Available';
               return (
                 <td
                   key={index}
@@ -57,6 +82,14 @@ export default ({ tableHeader, tableData, selectable, styles }) => {
                   data-testid="tableBodyData"
                 >
                   {item}
+                  {available ? (
+                    <img
+                      src={greenIcon}
+                      className={styles.greenIcon}
+                      data-testid={greenIcon}
+                      alt="green circle icon"
+                    />
+                  ) : null}
                 </td>
               );
             })}

@@ -9,19 +9,33 @@ const Table = ({
   tableHeader,
   tableData,
   tableActions,
-  selectedCount,
+  onClick,
+  isItemSelected,
   selectable,
+  selectedCount,
+  downloadCallback,
+  toggleAll,
+  checked,
 }) => {
   const [renderTableHeader, renderTableData] = useCreateTable({
     tableHeader,
     tableData,
     selectable,
+    onClick,
+    isItemSelected,
     styles,
   });
 
   return (
     <>
-      {tableActions ? <TableActions selectedCount={selectedCount} /> : null}
+      {tableActions ? (
+        <TableActions
+          selectedCount={selectedCount}
+          downloadCallback={downloadCallback}
+          toggleAll={toggleAll}
+          checked={checked}
+        />
+      ) : null}
       <table data-testid="table">
         <thead data-testid="thead">{renderTableHeader()}</thead>
         <tbody data-testid="tbody">{renderTableData()}</tbody>
@@ -34,16 +48,26 @@ Table.defaultProps = {
   tableHeader: [],
   tableData: [],
   tableActions: false,
-  selectedCount: 0,
+  onClick: () => {},
+  isItemSelected: () => {},
   selectable: false,
+  selectedCount: 0,
+  downloadCallback: () => {},
+  toggleAll: () => {},
+  checked: false,
 };
 
 Table.propTypes = {
   tableHeader: PropTypes.array.isRequired,
   tableData: PropTypes.array.isRequired,
   tableActions: PropTypes.bool,
-  selectedCount: PropTypes.number,
+  onClick: PropTypes.func,
+  isItemSelected: PropTypes.func,
   selectable: PropTypes.bool,
+  selectedCount: PropTypes.number,
+  downloadCallback: PropTypes.func,
+  toggleAll: PropTypes.func,
+  checked: PropTypes.bool,
 };
 
 export default Table;
