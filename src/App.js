@@ -19,7 +19,11 @@ function App() {
     }
   }
 
-  return <Table tableHeader={tableHeader} tableData={tableData} />;
+  return (
+    <div style={{ margin: '5px' }}>
+      <Table tableHeader={tableHeader} tableData={tableData} />{' '}
+    </div>
+  );
 }
 
 export default App;
