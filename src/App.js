@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Table from './components/Table';
 import data from './data/table.json';
 import capitalize from './utils/capitalize';
 
 function App() {
   const { tableHeader, tableData } = data;
+  let [selectedCount, setSelectedCount] = useState(0);
 
   // Capitalize the first letter of both the Table Headers and Statuses
   // This is not part of the useEffect hook because
@@ -21,7 +22,13 @@ function App() {
 
   return (
     <div style={{ margin: '5px' }}>
-      <Table tableHeader={tableHeader} tableData={tableData} />{' '}
+      <Table
+        tableHeader={tableHeader}
+        tableData={tableData}
+        selectedCount={selectedCount}
+        tableActions
+        selectable
+      />{' '}
     </div>
   );
 }

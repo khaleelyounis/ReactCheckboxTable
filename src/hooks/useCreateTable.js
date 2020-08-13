@@ -1,9 +1,16 @@
 import React from 'react';
 
-export default ({ tableHeader, tableData, styles }) => {
+export default ({ tableHeader, tableData, selectable, styles }) => {
   const renderTableHeader = () => {
     return (
       <tr className={styles.tableHeaderRow} data-testid="tableHeaderRow">
+        {selectable && tableHeader[0] !== '' ? (
+          <th
+            className={styles.tableHeaderCheckbox}
+            data-testid="tableHeaderCheckbox"
+          ></th>
+        ) : null}
+
         {tableHeader
           ? tableHeader.map((item, index) => {
               return (
@@ -33,6 +40,15 @@ export default ({ tableHeader, tableData, styles }) => {
             className={styles.tableBodyRow}
             data-testid="tableBodyRow"
           >
+            {selectable ? (
+              <td
+                className={styles.tableBodyCheckbox}
+                data-testid="tableBodyCheckbox"
+              >
+                <input type="checkbox" name="checkbox" data-testid="checkbox" />
+              </td>
+            ) : null}
+
             {values.map((item, index) => {
               return (
                 <td
