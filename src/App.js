@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import data from './data/table.json';
 import Table from './components/Table';
+import data from './data/table.json';
 import capitalize from './utils/capitalize';
 import { downloadHelper, determineToggle } from './utils/table';
 
