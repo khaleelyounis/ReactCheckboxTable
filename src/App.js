@@ -12,25 +12,19 @@ function App() {
 
   const onClick = useCallback(
     (index) => {
-      if (selections[index]) {
-        setSelectedCount(--selectedCount);
-      } else {
-        setSelectedCount(++selectedCount);
-      }
+      selections[index]
+        ? setSelectedCount(--selectedCount)
+        : setSelectedCount(++selectedCount);
 
       setSelections((prevState) => {
-        if (prevState[index]) {
-          return { ...prevState, [index]: false };
-        } else {
-          return { ...prevState, [index]: true };
-        }
+        return prevState[index]
+          ? { ...prevState, [index]: false }
+          : { ...prevState, [index]: true };
       });
 
-      if (selectedCount === Object.keys(selections).length) {
-        setChecked(true);
-      } else {
-        setChecked(false);
-      }
+      selectedCount === Object.keys(selections).length
+        ? setChecked(true)
+        : setChecked(false);
     },
     [selectedCount, selections],
   );
