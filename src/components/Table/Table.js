@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TableActions from '../TableActions';
-import useCreateTable from '../../hooks/useCreateTable';
-
+import { renderTableHeader, renderTableData } from '../../utils/table';
 import styles from './styles.module.css';
 
 const Table = ({
@@ -17,14 +16,30 @@ const Table = ({
   toggleAll,
   checked,
 }) => {
-  const [renderTableHeader, renderTableData] = useCreateTable({
-    tableHeader,
-    tableData,
-    selectable,
-    onClick,
-    isItemSelected,
-    styles,
-  });
+  let [tableHeaderElements, setTableHeaderElements] = useState(null);
+  let [tableDataElements, setTableDataElements] = useState(null);
+
+  // useEffect allows for the tableHeaderElements and the tableDataElements
+  // to not re-render on every state change. The only time it re-renders is
+  // if the any data passed in to the second argument are mutated
+  useEffect(() => {
+    setTableHeaderElements(
+      renderTableHeader({
+        tableHeader,
+        selectable,
+        styles,
+      }),
+    );
+    setTableDataElements(
+      renderTableData({
+        tableData,
+        selectable,
+        onClick,
+        isItemSelected,
+        styles,
+      }),
+    );
+  }, [tableHeader, tableData, selectable, onClick, isItemSelected]);
 
   return (
     <>
@@ -37,8 +52,8 @@ const Table = ({
         />
       ) : null}
       <table data-testid="table">
-        <thead data-testid="thead">{renderTableHeader()}</thead>
-        <tbody data-testid="tbody">{renderTableData()}</tbody>
+        <thead data-testid="thead">{tableHeaderElements}</thead>
+        <tbody data-testid="tbody">{tableDataElements}</tbody>
       </table>
     </>
   );
@@ -53,7 +68,6 @@ Table.defaultProps = {
   selectable: false,
   selectedCount: 0,
   downloadCallback: () => {},
-  toggleAll: () => {},
   checked: false,
 };
 
@@ -63,10 +77,10 @@ Table.propTypes = {
   tableActions: PropTypes.bool,
   onClick: PropTypes.func,
   isItemSelected: PropTypes.func,
+  selections: PropTypes.object,
   selectable: PropTypes.bool,
   selectedCount: PropTypes.number,
   downloadCallback: PropTypes.func,
-  toggleAll: PropTypes.func,
   checked: PropTypes.bool,
 };
 
