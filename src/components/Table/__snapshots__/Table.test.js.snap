@@ -1,0 +1,567 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Snapshots Should render with checkboxes and tableActions 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="tableActions"
+        data-testid="tableActions"
+      >
+        <div
+          class="tableActionsCheckbox"
+          data-testid="tableActionsCheckbox"
+        >
+          <input
+            data-testid="checkbox"
+            name="checkbox"
+            type="checkbox"
+          />
+           
+        </div>
+        <div
+          class="tableActionsSelected"
+          data-testid="tableActionsSelected"
+        >
+          None Selected
+        </div>
+        <div
+          class="tableActionsDownload"
+          data-testid="tableActionsDownload"
+        >
+          <img
+            alt="download icon"
+            class="downloadIcon"
+            data-testid="downloadIcon"
+            src="download.png"
+          />
+          Download Selected
+        </div>
+      </div>
+      <table
+        data-testid="table"
+      >
+        <thead
+          data-testid="thead"
+        >
+          <tr
+            class="tableHeaderRow"
+            data-testid="tableHeaderRow"
+          >
+            <th
+              class="tableHeaderCheckbox"
+              data-testid="tableHeaderCheckbox"
+            />
+            <th
+              class="tableHeaderData"
+              data-testid="tableHeaderData"
+            >
+              header1
+            </th>
+            <th
+              class="tableHeaderData"
+              data-testid="tableHeaderData"
+            >
+              header2
+            </th>
+            <th
+              class="tableHeaderData"
+              data-testid="tableHeaderData"
+            >
+              header3
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          data-testid="tbody"
+        >
+          <tr
+            class="tableBodyRow"
+            data-testid="tableBodyRow"
+          >
+            <td
+              class="tableBodyCheckbox"
+              data-testid="tableBodyCheckbox"
+            >
+              <input
+                data-testid="checkbox"
+                name="checkbox"
+                type="checkbox"
+              />
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              1
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              2
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              3
+            </td>
+          </tr>
+          <tr
+            class="tableBodyRow"
+            data-testid="tableBodyRow"
+          >
+            <td
+              class="tableBodyCheckbox"
+              data-testid="tableBodyCheckbox"
+            >
+              <input
+                data-testid="checkbox"
+                name="checkbox"
+                type="checkbox"
+              />
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              4
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              5
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              6
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="tableActions"
+      data-testid="tableActions"
+    >
+      <div
+        class="tableActionsCheckbox"
+        data-testid="tableActionsCheckbox"
+      >
+        <input
+          data-testid="checkbox"
+          name="checkbox"
+          type="checkbox"
+        />
+         
+      </div>
+      <div
+        class="tableActionsSelected"
+        data-testid="tableActionsSelected"
+      >
+        None Selected
+      </div>
+      <div
+        class="tableActionsDownload"
+        data-testid="tableActionsDownload"
+      >
+        <img
+          alt="download icon"
+          class="downloadIcon"
+          data-testid="downloadIcon"
+          src="download.png"
+        />
+        Download Selected
+      </div>
+    </div>
+    <table
+      data-testid="table"
+    >
+      <thead
+        data-testid="thead"
+      >
+        <tr
+          class="tableHeaderRow"
+          data-testid="tableHeaderRow"
+        >
+          <th
+            class="tableHeaderCheckbox"
+            data-testid="tableHeaderCheckbox"
+          />
+          <th
+            class="tableHeaderData"
+            data-testid="tableHeaderData"
+          >
+            header1
+          </th>
+          <th
+            class="tableHeaderData"
+            data-testid="tableHeaderData"
+          >
+            header2
+          </th>
+          <th
+            class="tableHeaderData"
+            data-testid="tableHeaderData"
+          >
+            header3
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-testid="tbody"
+      >
+        <tr
+          class="tableBodyRow"
+          data-testid="tableBodyRow"
+        >
+          <td
+            class="tableBodyCheckbox"
+            data-testid="tableBodyCheckbox"
+          >
+            <input
+              data-testid="checkbox"
+              name="checkbox"
+              type="checkbox"
+            />
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            1
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            2
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            3
+          </td>
+        </tr>
+        <tr
+          class="tableBodyRow"
+          data-testid="tableBodyRow"
+        >
+          <td
+            class="tableBodyCheckbox"
+            data-testid="tableBodyCheckbox"
+          >
+            <input
+              data-testid="checkbox"
+              name="checkbox"
+              type="checkbox"
+            />
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            4
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            5
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            6
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Table Snapshots Should render without checkboxes and tableActions 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <table
+        data-testid="table"
+      >
+        <thead
+          data-testid="thead"
+        >
+          <tr
+            class="tableHeaderRow"
+            data-testid="tableHeaderRow"
+          >
+            <th
+              class="tableHeaderData"
+              data-testid="tableHeaderData"
+            >
+              header1
+            </th>
+            <th
+              class="tableHeaderData"
+              data-testid="tableHeaderData"
+            >
+              header2
+            </th>
+            <th
+              class="tableHeaderData"
+              data-testid="tableHeaderData"
+            >
+              header3
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          data-testid="tbody"
+        >
+          <tr
+            class="tableBodyRow"
+            data-testid="tableBodyRow"
+          >
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              1
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              2
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              3
+            </td>
+          </tr>
+          <tr
+            class="tableBodyRow"
+            data-testid="tableBodyRow"
+          >
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              4
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              5
+            </td>
+            <td
+              class="tableBodyData"
+              data-testid="tableBodyData"
+            >
+              6
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>,
+  "container": <div>
+    <table
+      data-testid="table"
+    >
+      <thead
+        data-testid="thead"
+      >
+        <tr
+          class="tableHeaderRow"
+          data-testid="tableHeaderRow"
+        >
+          <th
+            class="tableHeaderData"
+            data-testid="tableHeaderData"
+          >
+            header1
+          </th>
+          <th
+            class="tableHeaderData"
+            data-testid="tableHeaderData"
+          >
+            header2
+          </th>
+          <th
+            class="tableHeaderData"
+            data-testid="tableHeaderData"
+          >
+            header3
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-testid="tbody"
+      >
+        <tr
+          class="tableBodyRow"
+          data-testid="tableBodyRow"
+        >
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            1
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            2
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            3
+          </td>
+        </tr>
+        <tr
+          class="tableBodyRow"
+          data-testid="tableBodyRow"
+        >
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            4
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            5
+          </td>
+          <td
+            class="tableBodyData"
+            data-testid="tableBodyData"
+          >
+            6
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
