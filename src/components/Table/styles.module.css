@@ -1,0 +1,36 @@
+.tableHeaderRow {
+  text-align: left;
+  padding: 15px;
+}
+
+.tableHeaderData {
+  padding: 1rem 0;
+  font-weight: 500;
+}
+
+.tableBodyRow:hover {
+  background-color: rgba(211, 211, 211, 0.2);
+  cursor: pointer;
+}
+
+.tableBodyData {
+  padding: 1rem 0;
+  border-bottom: 0.5px solid rgb(169, 169, 169);
+}
+
+.tableHeaderCheckbox,
+.tableBodyCheckbox {
+  padding: 1rem 1rem 1rem 0.5rem;
+  border-bottom: 0.5px solid rgb(169, 169, 169);
+}
+
+.tableBodyCheckbox:hover {
+  cursor: pointer;
+}
+
+.greenIcon {
+  height: 20px;
+  width: 20px;
+  float: right;
+  padding-right: 0.5rem;
+}
